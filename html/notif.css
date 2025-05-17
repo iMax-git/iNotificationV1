@@ -1,0 +1,92 @@
+/* ___________________________________________________________________ */
+/* ___________________________________________________________________ */
+/* _____               Config of notification CSS               _____ */
+/* ___________________________________________________________________ */
+/* ___________________________________________________________________ */
+
+
+#notification > div{
+    background-color: rgba(0, 0, 0, 0.858);
+    border: red;
+}
+
+/* https://fonts.google.com/  -> Site pour des polices d'écriture */
+
+@import url('https://fonts.googleapis.com/css2?family=Mina&display=swap'); 
+
+#notification > div > p{
+    font-family: 'Mina', sans-serif;
+}
+
+/* ___________________________________________________________________ */
+/* ___________________________________________________________________ */
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    color:white;
+}
+/* ___________________________________________________________________ */
+/* ___________________________________________________________________ */
+/* _____               Start of notification CSS                 _____ */
+/* ___________________________________________________________________ */
+/* ___________________________________________________________________ */
+#notification{
+    float: right;
+    width: 40vh;
+    height: 100%;
+}
+
+#notification > div{
+    margin-top: 1vh;
+    overflow: clip;
+    border-style: none none none solid;
+}
+
+#notification > div > img{
+    width: 10vh;
+    height: 10vh;
+    
+}
+
+#notification > div > p{
+    text-align: center;
+    width: 74%;
+    float: right;
+    margin-top: 5%;
+    height: 100%;
+}
+
+@keyframes notification{
+    from {width: 25%;} to {width: 100%;}
+}
+
+@keyframes notification-back{
+	from {width: 100%;} to {width: 25%;}
+}
+
+@keyframes fadeout{
+	from {opacity: 1; width: 25%;} to {opacity: 0; width: 25%;}
+}
+
+.show{
+    animation: notification 250ms ;
+}
+
+.hide{
+    font-size: 0;
+	animation: notification-back 0.4s ease-out forwards;
+}
+
+.fadeout{
+    font-size: 0;
+    animation: fadeout 1s ease-out forwards;
+}
+
+/* ___________________________________________________________________ */
+/* ___________________________________________________________________ */
+/* ____                 END of notification CSS                   ____ */
+/* ___________________________________________________________________ */
+/* ___________________________________________________________________ */
